@@ -29,17 +29,17 @@ exports.authorize = function(req, res) {
 exports.myTeams = function(req, res) {
     FantasySports
         .request(req, res)
-        .api('http://fantasysports.yahooapis.com/fantasy/v2/users;use_login=1/games;game_keys=nfl/leagues?format=json')
+        .api('http://fantasysports.yahooapis.com/fantasy/v2/users;use_login=1/games;game_keys=nba/leagues?format=json')
         .done(function(data) {
-            var leagueData = data.fantasy_content.users[0].user[1].games[0].game[1].leagues 
-            var	leagues = [];
+            // var leagueData = data.fantasy_content.users[0].user[1].games[0].game[1].leagues 
+            // var	leagues = [];
 
-            console.log(leagueData);
+            // console.log(leagueData);
 
-            _.each(leagueData, function(value) {
-                if (value.league) leagues.push(value.league[0]);
-            });
-            res.json(leagues);
+            // _.each(leagueData, function(value) {
+            //     if (value.league) leagues.push(value.league[0]);
+            // });
+            res.json(data);
         });
 };
 
@@ -75,7 +75,7 @@ module.exports = function (app, express) {
 
 	app.get("/auth/oauth/callback", exports.authorize);
 
-	app.get("/myTeams", exports.authorize);
+	app.get("/myTeams", exports.myTeams);
 
 	// hit this link for suggestions
 	app.post("/api/suggest", function (req, res) {
