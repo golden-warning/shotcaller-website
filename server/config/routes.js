@@ -11,7 +11,7 @@ FantasySports.options({
     "oauthKey": 'dj0yJmk9bXluWHZ1bXFoOGFDJmQ9WVdrOVlXSTBkVlZTTm1VbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0yNA--',
     "oauthSecret": '568e13369b8c9bc7c2d8d3185dec8245755691a7',
     "version": "1.0",
-    "callback": "http://giraffedraft.azurewebsites.net/auth/oauth/callback",
+    "callback": "http://fantasyshotcaller.azurewebsites.net/auth/oauth/callback",
     "encryption": "HMAC-SHA1"
 });
 
@@ -42,6 +42,8 @@ exports.myTeams = function(req, res) {
             res.json(data);
         });
 };
+
+
 
 module.exports = function (app, express) {
 	app.use(cookieSession({ 
