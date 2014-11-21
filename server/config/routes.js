@@ -1,6 +1,6 @@
 var path = require('path');
-var picker = require('../picker/picker.js')
-var fs = require('fs')
+var picker = require('../picker/picker.js');
+var fs = require('fs');
 var cookieSession = require('cookie-session');
 
 var FantasySports = require('FantasySports');
@@ -31,7 +31,7 @@ exports.myTeams = function(req, res) {
         .request(req, res)
         .api('http://fantasysports.yahooapis.com/fantasy/v2/users;use_login=1/games;game_keys=nba/leagues?format=json')
         .done(function(data) {
-            // var leagueData = data.fantasy_content.users[0].user[1].games[0].game[1].leagues 
+            // var leagueData = data.fantasy_content.users[0].user[1].games[0].game[1].leagues
             // var	leagues = [];
 
             // console.log(leagueData);
@@ -46,10 +46,10 @@ exports.myTeams = function(req, res) {
 
 
 module.exports = function (app, express) {
-	app.use(cookieSession({ 
-	    key: 'some key', 
-	    secret: 'some secret', 
-	    proxy: true 
+	app.use(cookieSession({
+	    key: 'some key',
+	    secret: 'some secret',
+	    proxy: true
 	}));
 	// Use the client folder as the root public folder.
 	// This allows client/index.html to be used on the / route.
@@ -94,5 +94,3 @@ module.exports = function (app, express) {
 		})
 	});
 };
-
-
