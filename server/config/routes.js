@@ -8,8 +8,8 @@ var FantasySports = require('FantasySports');
 FantasySports.options({
     "accessTokenUrl": "https://api.login.yahoo.com/oauth/v2/get_request_token",
     "requestTokenUrl": "https://api.login.yahoo.com/oauth/v2/get_token",
-    "oauthKey": 'dj0yJmk9bXluWHZ1bXFoOGFDJmQ9WVdrOVlXSTBkVlZTTm1VbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0yNA--',
-    "oauthSecret": '568e13369b8c9bc7c2d8d3185dec8245755691a7',
+    "oauthKey": 'dj0yJmk9ZjhVNlBMc1BCbGE5JmQ9WVdrOWJYVjRjRmxuTXpZbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD00Nw--',
+    "oauthSecret": 'dd1b9e527bc0d4a8c5b92b7ef497d5e30b83863f',
     "version": "1.0",
     "callback": "http://fantasyshotcaller.azurewebsites.net/auth/oauth/callback",
     "encryption": "HMAC-SHA1"
@@ -73,7 +73,7 @@ module.exports = function (app, express) {
 
 	});
 
-	app.get("/auth/oauth", exports.oauth);
+	app.get("/", exports.oauth);
 
 	app.get("/auth/oauth/callback", exports.authorize);
 
