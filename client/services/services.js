@@ -1,8 +1,8 @@
 ;(function() {
   angular.module('giraffeDraft.services', [])
-  .service('leagueService', Service());
+  .service('LeagueService', LeagueService;
 
-  function Service($http) {
+  function LeagueService($http) {
 
     }
 }).call(this);
