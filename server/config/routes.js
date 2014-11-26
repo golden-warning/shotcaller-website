@@ -13,7 +13,7 @@ FantasySports.options({
     "oauthKey": 'dj0yJmk9b1poSjE3YXpYNDFEJmQ9WVdrOVZGcE5kMWhsTldrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD02Nw--',
     "oauthSecret": 'ea0c65ee1b71845d9f2995a305fc1f2191ec66b6',
     "version": "1.0",
-    "callback": "http://giraffedraft.azurewebsites.net/auth/oauth/callback",
+    "callback": "http://shotcaller.azurewebsites.net/auth/oauth/callback",
     "encryption": "HMAC-SHA1"
 });
 
