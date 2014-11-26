@@ -2,7 +2,7 @@
   angular.module('giraffeDraft.services', [])
   .service('leagueService', Service());
 
-  function Service() {
-    //data here
-  }
+  function Service($http) {
+
+    }
 }).call(this);
