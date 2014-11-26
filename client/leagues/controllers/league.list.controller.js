@@ -1,6 +1,8 @@
 ;(function() {
   angular.module('giraffeDraft')
-  .controller('leagueListController', function() {
-    
-  });
+  .controller('LeagueListController', LeagueListController);
+
+  function LeagueListController(){
+  	console.log('List controller instantiated')
+  }
 }).call(this);

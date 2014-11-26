@@ -6,7 +6,7 @@
 			.state('leagues', {
 				url: '/leagues',
 				templateUrl: './leagues/views/league.list.view.html',
-				controller: 'leagueListController as vm'
+				controller: 'LeagueListController as vm'
 			})
 			.state('league', {
 				url: '/leagues/{leagueID}',
