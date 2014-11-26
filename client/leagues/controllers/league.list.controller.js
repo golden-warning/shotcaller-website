@@ -1,6 +1,6 @@
 ;(function() {
   angular.module('giraffeDraft')
-  .controller('leaguesController', function() {
+  .controller('leagueListController', function() {
     
   });
 }).call(this);
