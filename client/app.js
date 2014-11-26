@@ -1,11 +1,11 @@
 ;(function (){
 	"use strict";
 	angular.module("giraffeDraft", ['ui.router', 'giraffeDraft.services'])
-	.config(function($stateProvider) {
+	.config(function($stateProvider, $urlRouterProvider) {
 		$stateProvider
 			.state('leagues', {
 				url: '/leagues',
-				templateUrl: './leagues/view.html',
+				templateUrl: './leagues/views/league.list.view.html',
 				controller: 'leaguesController as vm'
 			})
 			.state('league', {
@@ -18,6 +18,7 @@
 				templateUrl: './matchup/view.html',
 				controller: 'matchupController as vm'
 			})
+		$urlRouterProvider.otherwise('/leagues');
 	})
 
 	.run(function($state) {
