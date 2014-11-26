@@ -6,17 +6,17 @@
 			.state('leagues', {
 				url: '/leagues',
 				templateUrl: './leagues/view.html',
-				controller: 'leaguesController as c'
+				controller: 'leaguesController as vm'
 			})
 			.state('league', {
-				url: '/league',
+				url: '/leagues/{leagueID}',
 				templateUrl: './league/view.html',
-				controller: 'leagueController as c'
+				controller: 'leagueController as vm'
 			})
 			.state('matchup', {
-				url: '/matchup',
+				url: '/leagues/{leagueID}/{matchupID}',
 				templateUrl: './matchup/view.html',
-				controller: 'matchupController as c'
+				controller: 'matchupController as vm'
 			})
 	})
 
