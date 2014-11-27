@@ -144,15 +144,6 @@ module.exports = function (app, express) {
     });
 
     // chrome extension hits this link to get info on all players
-    app.get("/api/init", function (req, res) {
-
-        fs.readFile(__dirname + "/../data/playerjson.txt", function(err,data){
-            var data = data + ''
-            var data = JSON.parse(data);
-            res.send(data);
-        })
-
-    });
 
 
     // app.use('/auth', require('./auth/index.js'));
@@ -174,18 +165,5 @@ module.exports = function (app, express) {
     
     app.get("/myleagueteams", exports.myLeagueTeams);
 
-    // hit this link for suggestions
-    app.post("/api/suggest", function (req, res) {
-        var data = '';
-        req.on("data", function (stuff) {
-            data += stuff;
-        });
-
-        req.on('end', function() {
-            data = JSON.parse(data);
-            console.log(data);
-            var picks = picker.getPicks(data);
-            res.send(JSON.stringify(picks));
-        })
-    });
+    
 };
