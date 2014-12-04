@@ -8,7 +8,7 @@ body {
     font-family: 'Lato',sans-serif;
 	font-weight: 300;
     color: #666;
-    background-color: black;
+    background-color: #101012;
 }
 
 html {
@@ -317,6 +317,12 @@ hr {
 
 }
 
+.intro .bottomSlogan{
+  padding: 5%;
+  text-align: center;
+
+}
+
 .intro .page-scroll {
 	text-align: center;
 }
@@ -352,11 +358,11 @@ hr {
 
 
 /* ===========================
---- About
+--- Team
 ============================ */
 
 .boxed-grey {
-	background: #f9f9f9;
+	background: #black;
 	padding: 20px;
 }
 
